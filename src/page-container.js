@@ -29,13 +29,11 @@ class PageContainer extends Component {
 
     render() {
 
-        const repoList = this.props.repoList;
-        const title = this.props.title;
-        var loadingWheel;
+        let repoList = this.props.repoList;
+        let title = this.props.title;
+        let loadingWheel = null;
 
-        if (repoList)
-            loadingWheel = null;
-        else
+        if (!repoList)
             loadingWheel = <LoadingWheel className="fa fa-spinner" hide={title}/>;
 
         return (

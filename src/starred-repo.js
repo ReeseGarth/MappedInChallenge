@@ -47,7 +47,7 @@ const CountersLinks = styled.a`
 class StarredRepo extends Component {
 
     render() {
-        const repo = this.props.repo;
+        let repo = this.props.repo;
 
         return (
             <Repo>
